@@ -1,0 +1,30 @@
+/*CSS Main Stylesheet*/
+
+
+
+/* Button Styles */
+.button {
+	border: 1px solid #000000;
+	background-color: white;
+	font-size: 1em;
+	margin: 20px 10px 20px 10px;
+
+	
+
+}
+
+.button:hover {
+box-shadow: 3px 3px #888888;
+cursor: pointer;
+
+}
+
+
+
+#hello {
+	display: none;
+}
+
+#goodbye {
+	display: none;
+}
