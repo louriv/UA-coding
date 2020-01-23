@@ -1,38 +1,73 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-	
 	<title>Under Armour Coding Assessment</title>
 
-<!-- We Obviously Need a Stylesheet -->
- <link rel="stylesheet" href="css/style.css">
+	<!-- master stylesheet for custom styles -->
+	<link rel="stylesheet" href="css/style.css">
 
-<!--bootstrap is for responsive but we can do others as well -->
- <link rel="stylesheet" href="css/bootstrap.min.css">
-
-
+	<!--bootstrap is for responsive grid -->
+	<link rel="stylesheet" href="css/bootstrap.min.css">
 </head>
 
 
 <body>
-
 	<div class="container-fluid">
-	<button class="button" name="hello" value="Show hello blocks" onclick="showDiv()">Create Rows saying Hello</button>
+		<button class="buttonstyles" name="helloblocks" value="Show hello blocks"  onclick="switch_div(1);">Create Rows saying Hello</button>
 
-	<button class="button">Create Rows saying Goodbye</button>
+		<button class="buttonstyles" name="goodbyeblocks" value="Show Goodbye blocks" onclick="switch_div(2);">Create Rows saying Goodbye</button>
 
-	<!--section to appear when the hello button is clicked -->
-	<div id="hello">
-		<p>some stuff</p>
+		<!--section to appear when the hello button is clicked -->
+		<section id="show_1" class="hideblocks">
+			<div class="block">
+				<h4>Hello</h4>
+			</div>
+			<div class="block">
+				<h4>Hello</h4>
+			</div>
+			<div class="block">
+				<h4>Hello</h4>
+			</div>
+			<div class="block">
+				<h4>Hello</h4>
+			</div>
+			<div class="block">
+				<h4>Hello</h4>
+			</div>
+		</section>
+
+		<!--section to appear when the goodbye button is clicked -->
+		<section id="show_2" class="hideblocks">
+			
+			<div class="block">
+				<h4>Goodbye</h4>
+			</div>
+			<div class="block">
+				<h4>Goodbye</h4>
+			</div>
+			<div class="block">
+				<h4>Goodbye</h4>
+			</div>
+			<div class="block">
+				<h4>Goodbye</h4>
+			</div>
+			<div class="block">
+				<h4>Goodbye</h4>
+			</div>
+		</div>
+		</section>
+
 	</div>
-
-	<!--section to appear when the goodbye button is clicked -->
-	<div id="goodbye">
-		<p>some stuff</p>
-	</div>
-
-</div>
 </body>
+
+<!-- write function that alternates the div shown based on button press -->
+<script>
+function switch_div(show) {  
+  document.getElementById("show_"+show).style.display = "block";
+  document.getElementById("show_"+((show==1)?2:1)).style.display = "none";
+} 
+</script>
 
 
 <!--Adding bootstrap JavaScript dependency -->

@@ -1,30 +1,36 @@
 /*CSS Main Stylesheet*/
 
-
-
 /* Button Styles */
-.button {
+.buttonstyles {
+	font-weight: 500;
 	border: 1px solid #000000;
 	background-color: white;
-	font-size: 1em;
+	font-size: 14px;
 	margin: 20px 10px 20px 10px;
-
-	
-
+	box-shadow: 3px 3px #888888;
 }
 
-.button:hover {
-box-shadow: 3px 3px #888888;
+/*hover to remove shadow and create pointer */
+.buttonstyles:hover {
+box-shadow: none;
 cursor: pointer;
-
 }
 
+/*get rid of blue outline when you click on a button */
+.buttonstyles:focus {
+outline: none;
+}
 
+/*universal styling for all blocks used*/
+.block {
+border: 2px solid #D3D3D3;
+padding:15px;
+margin: 10px;
+max-width: 480px;
+}
 
-#hello {
+/*default hide blocks*/
+.hideblocks {
 	display: none;
 }
 
-#goodbye {
-	display: none;
-}
